@@ -1,82 +1,51 @@
-import type { Metadata } from 'next'
-import { Inter, Space_Grotesk, Space_Mono } from 'next/font/google'
+import Providers from '@/components/Providers'
+import type { Metadata, Viewport } from 'next'
+import { Source_Sans_3, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
 
-import AnimatedBackground from '@/components/AnimatedBackground'
-import CommandPalette from '@/components/CommandPalette'
-import CursorGlow from '@/components/CursorGlow'
-import LoadingScreen from '@/components/LoadingScreen'
-import NavBar from '@/components/NavBar'
-import StatusIndicator from '@/components/StatusIndicator'
-
-const inter = Inter({
+const sans = Source_Sans_3({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
   display: 'swap',
 })
 
-const spaceGrotesk = Space_Grotesk({
+const serif = Source_Serif_4({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-serif',
   display: 'swap',
 })
 
-const spaceMono = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-space-mono',
-  display: 'swap',
-})
+const themeBoot = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t='dark';document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;}catch(e){document.documentElement.dataset.theme='dark';document.documentElement.style.colorScheme='dark';}})();`
 
 export const metadata: Metadata = {
-  title: 'Heisenberg — AI · Quant · Systems',
+  title: 'Vignesh Kanike',
   description:
-    'Personal interface of Heisenberg 001 — building at the intersection of AI, blockchain, and entrepreneurship. IIT Delhi.',
-  keywords: ['AI', 'Quantitative Finance', 'Systems', 'IIT Delhi', 'Machine Learning'],
-  authors: [{ name: 'Heisenberg 001' }],
-  openGraph: {
-    title: 'Heisenberg 001',
-    description: 'AI · Quant · Systems',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Heisenberg 001',
-    description: 'AI · Quant · Systems',
-  },
+    'Student at IIT Delhi. AI safety, interpretability, and generative engine optimization.',
+  authors: [{ name: 'Vignesh Kanike' }],
+  icons: { icon: '/favicon.svg' },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export const viewport: Viewport = {
+  themeColor: '#111111',
+  colorScheme: 'dark light',
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${spaceMono.variable}`}
+      data-theme="dark"
+      suppressHydrationWarning
+      className={`${sans.variable} ${serif.variable}`}
     >
-      <body className="bg-[#000010] text-white antialiased">
-        {/* Loading screen — first thing rendered, covers everything */}
-        <LoadingScreen />
-
-        {/* Custom cursor overlay */}
-        <CursorGlow />
-
-        {/* Command palette — triggered by Ctrl/Cmd+K */}
-        <CommandPalette />
-
-        {/* Animated particle/grid background — fixed, z-0 */}
-        <AnimatedBackground />
-
-        {/* Navigation — fixed top bar */}
-        <NavBar />
-
-        {/* Page content */}
-        <main className="relative z-10">{children}</main>
-
-        {/* System status indicator — fixed bottom-left */}
-        <StatusIndicator />
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBoot }} />
+      </head>
+      <body>
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4">
+          Skip to content
+        </a>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
