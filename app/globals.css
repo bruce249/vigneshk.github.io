@@ -60,6 +60,42 @@
     font-size: 0.78rem;
     color: var(--muted);
   }
+
+  .paper {
+    max-width: 42rem;
+  }
+
+  .paper .katex {
+    color: var(--fg);
+  }
+
+  .paper-eq .katex-display {
+    margin: 0;
+  }
+
+  .paper-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .paper-table th,
+  .paper-table td {
+    border-bottom: 1px solid var(--line);
+    padding: 0.4rem 0.55rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .paper-table th {
+    font-weight: 600;
+  }
+
+  .paper-best {
+    background: color-mix(in srgb, var(--fg) 8%, transparent);
+    padding: 0.05rem 0.25rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

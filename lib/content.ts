@@ -70,14 +70,22 @@ export const experience = [
 
 export const writing = [
   {
+    date: '2026-10-04',
+    displayDate: 'October 4, 2026',
+    title:
+      'Proof of Weights: Per-Layer Activation Profiles for Attributing Weight Tampering in Verifiable LLM Inference',
+    authors: 'Vignesh Kanike',
+    href: '/writing/proof-of-weights',
+    external: false,
+  },
+  {
     date: '2026-09-05',
     displayDate: 'September 5, 2026',
     title:
       'Clarification as a Branch Point in AI Recommendations: Alternative Clarifying Answers Cut Brand-Set Jaccard Overlap 68% Below Within-Branch Noise',
     authors: 'Vignesh Kanike',
     href: 'https://www.aeosim.com/blog/clarification-branch-point',
-    excerpt:
-      'Twelve commercial categories on GPT-5.6 Luna: branch spread Jaccard 0.162 vs within-branch noise 0.511 ungrounded (68% lower), 12/12 positive paired gaps, and web_search left the effect intact.',
+    external: true,
   },
   {
     date: '2026-08-31',
@@ -86,8 +94,7 @@ export const writing = [
       'AI Answer Alignment Beyond Factual Accuracy: Six Observation Dimensions, Materiality and Recurrence Gates, and Misalignment Rates Across Prompt Families',
     authors: 'Vignesh Kanike & Piush Vaish',
     href: 'https://www.aeosim.com/blog/ai-answer-alignment',
-    excerpt:
-      'Article 3/n on synthetic data in LLM visibility tools. Score six answer observations per run, gate on materiality and recurrence, and read misalignment as a rate by family, engine, and multi-turn trajectory.',
+    external: true,
   },
   {
     date: '2026-08-27',
@@ -96,8 +103,7 @@ export const writing = [
       'Visibility Has a Third Axis: Separating Brand Exclusion from Engine Incoherence in Multi-Turn Drop Rates and Half-Life',
     authors: 'Vignesh Kanike',
     href: 'https://www.aeosim.com/blog/visibility-has-a-third-axis',
-    excerpt:
-      'Your drop rate is measuring two different things at once. Coherence separates justified brand exclusion from engine forgetfulness, and γ can reverse cross-engine rankings.',
+    external: true,
   },
   {
     date: '2026-08-13',
@@ -106,8 +112,7 @@ export const writing = [
       'Measuring AI Search Visibility Beyond the First Response: A Markov Model for Brand Drop-Off, Recovery, and Half-Life Across Buying Turns',
     authors: 'Vignesh Kanike',
     href: 'https://www.aeosim.com/blog/visibility-has-two-axes',
-    excerpt:
-      'AI visibility research settled on repeated sampling for run-to-run variance. Brand presence also drifts across turns. A two-state Markov chain gives GEO teams drop rate, recovery rate, and visibility half-life.',
+    external: true,
   },
 ] as const
 

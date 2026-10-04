@@ -1,5 +1,7 @@
 import ThemeToggle from '@/components/ThemeToggle'
-import { experience, focusAreas, person, socials, writing } from '@/lib/content'
+import WritingList from '@/components/WritingList'
+import { experience, focusAreas, person, socials } from '@/lib/content'
+import Link from 'next/link'
 
 export default function HomePage() {
   return (
@@ -37,6 +39,7 @@ export default function HomePage() {
               {social.label}
             </a>
           ))}
+          <Link href="/writing">writing</Link>
         </p>
 
         <section id="experience" className="scroll-mt-8 pt-10">
@@ -71,24 +74,7 @@ export default function HomePage() {
 
         <section id="writing" className="scroll-mt-8 pt-10">
           <h2 className="font-serif text-2xl text-fg"># Writing</h2>
-          <ul className="mt-5 space-y-4">
-            {writing.map((post) => (
-              <li key={post.href}>
-                <span className="text-sm text-muted">{post.displayDate}</span>
-                <a
-                  href={post.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 block"
-                >
-                  {post.title}
-                </a>
-                {post.authors !== person.fullName && (
-                  <span className="text-sm text-muted">with Piush Vaish</span>
-                )}
-              </li>
-            ))}
-          </ul>
+          <WritingList />
         </section>
       </main>
     </div>
