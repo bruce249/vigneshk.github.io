@@ -73,10 +73,13 @@ export const writing = [
     date: '2026-10-04',
     displayDate: 'October 4, 2026',
     title:
-      'Proof of Weights: Per-Layer Activation Profiles for Attributing Weight Tampering in Verifiable LLM Inference',
+      'Detecting Weight Tampering in Verifiable LLM Inference: Per-Layer Activation Profiles and the Attention-Kernel Loophole',
     authors: 'Vignesh Kanike',
     href: '/writing/proof-of-weights',
     external: false,
+    summary:
+      'Eager-attention noise moves the last layer of Qwen2.5-1.5B more than 8-bit or 4-bit quantisation, so a last-layer check misses the tampering. A per-layer profile attributes four known modifications at 99.3% balanced accuracy.',
+    image: '/paper/fig1.png',
   },
   {
     date: '2026-09-05',
@@ -86,6 +89,9 @@ export const writing = [
     authors: 'Vignesh Kanike',
     href: 'https://www.aeosim.com/blog/clarification-branch-point',
     external: true,
+    summary:
+      'Twelve commercial categories on GPT-5.6 Luna: branch spread Jaccard 0.162 versus within-branch noise 0.511 ungrounded, 68% lower, and web search left the effect intact.',
+    image: '/writing/clarification-branch-point.png',
   },
   {
     date: '2026-08-31',
@@ -95,6 +101,9 @@ export const writing = [
     authors: 'Vignesh Kanike & Piush Vaish',
     href: 'https://www.aeosim.com/blog/ai-answer-alignment',
     external: true,
+    summary:
+      'Score six answer observations per run, gate on materiality and recurrence, and read misalignment as a rate by prompt family, engine, and multi-turn trajectory.',
+    image: '',
   },
   {
     date: '2026-08-27',
@@ -104,6 +113,9 @@ export const writing = [
     authors: 'Vignesh Kanike',
     href: 'https://www.aeosim.com/blog/visibility-has-a-third-axis',
     external: true,
+    summary:
+      'A drop rate mixes two different things. Coherence separates justified brand exclusion from engine forgetfulness, and that split can reverse cross-engine rankings.',
+    image: '/writing/visibility-has-a-third-axis.svg',
   },
   {
     date: '2026-08-13',
@@ -113,6 +125,9 @@ export const writing = [
     authors: 'Vignesh Kanike',
     href: 'https://www.aeosim.com/blog/visibility-has-two-axes',
     external: true,
+    summary:
+      'Brand presence drifts across turns, not only between runs. A two-state Markov chain gives drop rate, recovery rate, and visibility half-life.',
+    image: '/writing/visibility-has-two-axes.png',
   },
 ] as const
 
@@ -123,13 +138,18 @@ export const socials = [
     href: 'https://github.com/bruce249',
   },
   {
+    id: 'email',
+    label: 'email',
+    href: 'mailto:vigneshkanike.iitd@gmail.com',
+  },
+  {
     id: 'linkedin',
     label: 'linkedin',
     href: 'https://linkedin.com/in/vigneshkanike/',
   },
   {
     id: 'x',
-    label: 'x',
+    label: 'X',
     href: 'https://x.com/heisenberg_249',
   },
 ] as const

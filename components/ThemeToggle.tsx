@@ -6,12 +6,13 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <p className="flex items-center gap-1 text-sm">
+    <p className="flex items-center gap-1.5 text-sm text-muted">
       <button
         type="button"
+        data-set-theme="light"
         onClick={() => setTheme('light')}
         aria-pressed={theme === 'light'}
-        className={theme === 'light' ? 'text-fg' : 'text-muted hover:text-fg'}
+        className={theme === 'light' ? 'text-accent' : 'text-muted hover:text-fg'}
       >
         light
       </button>
@@ -20,9 +21,10 @@ export default function ThemeToggle() {
       </span>
       <button
         type="button"
+        data-set-theme="dark"
         onClick={() => setTheme('dark')}
         aria-pressed={theme === 'dark'}
-        className={theme === 'dark' ? 'text-fg' : 'text-muted hover:text-fg'}
+        className={theme === 'dark' ? 'text-accent' : 'text-muted hover:text-fg'}
       >
         dark
       </button>

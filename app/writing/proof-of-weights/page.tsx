@@ -1,26 +1,17 @@
-import ThemeToggle from '@/components/ThemeToggle'
 import ProofOfWeights from '@/components/paper/ProofOfWeights'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import 'katex/dist/katex.min.css'
 
 export const metadata: Metadata = {
-  title: 'Proof of Weights · Vignesh Kanike',
+  title: 'Detecting Weight Tampering in Verifiable LLM Inference · Vignesh Kanike',
   description:
-    'Proof of Weights: Per-Layer Activation Profiles for Attributing Weight Tampering in Verifiable LLM Inference.',
-  authors: [{ name: 'Vignesh Kanike', url: 'mailto:ms1240669@iitd.ac.in' }],
+    'Detecting Weight Tampering in Verifiable LLM Inference: Per-Layer Activation Profiles and the Attention-Kernel Loophole.',
+  authors: [{ name: 'Vignesh Kanike' }],
 }
 
 export default function ProofOfWeightsPage() {
   return (
-    <div className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
-      <header className="mb-10 flex items-center justify-between">
-        <p className="flex flex-wrap gap-x-4 text-sm text-muted">
-          <Link href="/">Home</Link>
-          <Link href="/writing">Writing</Link>
-        </p>
-        <ThemeToggle />
-      </header>
+    <div className="column pb-8 pt-10 sm:pt-14">
       <main id="main">
         <ProofOfWeights />
       </main>
