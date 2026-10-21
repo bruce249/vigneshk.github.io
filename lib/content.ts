@@ -72,6 +72,17 @@ export const writing = [
   {
     date: '2026-10-21',
     displayDate: 'October 21, 2026',
+    title: 'Language as an Oversight Surface in Agent-to-Agent Systems',
+    authors: 'Vignesh Kanike',
+    href: '/writing/language-as-an-oversight-surface',
+    external: false,
+    summary:
+      'A five-study A2A benchmark. Against a cheap monitor, English and Hindi are indistinguishable, 60 of 60 leaks flagged. A mid-strength monitor catches 57% of English leaks and 97% of Hindi ones.',
+    image: '/paper/a2a/fig3_detection.png',
+  },
+  {
+    date: '2026-10-21',
+    displayDate: 'October 21, 2026',
     title: 'When Labels Override Evidence',
     authors: 'Vignesh Kanike',
     href: '/writing/when-labels-override-evidence',
