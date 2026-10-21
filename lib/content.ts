@@ -70,6 +70,17 @@ export const experience = [
 
 export const writing = [
   {
+    date: '2026-10-21',
+    displayDate: 'October 21, 2026',
+    title: 'When Labels Override Evidence',
+    authors: 'Vignesh Kanike',
+    href: '/writing/when-labels-override-evidence',
+    external: false,
+    summary:
+      'On a frozen benchmark of 600 human-written items, swapping yes and no flips 96.7% of the answers Laya otherwise gets right. Blocking the attention edge from each answer token to its label word cuts that to 2.6%, at a cost of 1.8 accuracy points.',
+    image: '/paper/laya/fig2.png',
+  },
+  {
     date: '2026-10-04',
     displayDate: 'October 4, 2026',
     title:

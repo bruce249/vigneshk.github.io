@@ -303,6 +303,14 @@
     text-underline-offset: 0.16em;
   }
 
+  .paper code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: color-mix(in srgb, var(--fg) 8%, transparent);
+    padding: 0.05rem 0.28rem;
+    border-radius: 0.2rem;
+  }
+
   .paper .katex {
     color: var(--fg);
   }
