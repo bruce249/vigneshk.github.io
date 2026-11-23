@@ -70,6 +70,18 @@ export const experience = [
 
 export const writing = [
   {
+    date: '2026-11-15',
+    displayDate: 'November 15, 2026',
+    title:
+      'Cheap Talk: Answer Engines Ignore Failed Signature Checks and Trust Forgeable Signals',
+    authors: 'Vignesh Kanike',
+    href: '/writing/cheap-talk',
+    external: false,
+    summary:
+      'On invented topics, persuasive writing raised false answers by 54 points, and a fake badge by 15. Models followed a passed signature check (+43 points) and ignored a failed one (−1.0 points). A line in the false page claiming the check had passed added another 30.',
+    image: '/paper/cheap-talk/main_fig1_premiums.png',
+  },
+  {
     date: '2026-10-21',
     displayDate: 'October 21, 2026',
     title: 'Language as an Oversight Surface in Agent-to-Agent Systems',
