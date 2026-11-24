@@ -75,8 +75,8 @@ export const writing = [
     title:
       'Cheap Talk: Answer Engines Ignore Failed Signature Checks and Trust Forgeable Signals',
     authors: 'Vignesh Kanike',
-    href: '/writing/cheap-talk',
-    external: false,
+    href: 'https://apartresearch.com/sprints/projects/cheap-talk-answer-engines-ignore-failed-signature-checks-and-trust-forgeable-signals-v8442ohnb5',
+    external: true,
     summary:
       'On invented topics, persuasive writing raised false answers by 54 points, and a fake badge by 15. Models followed a passed signature check (+43 points) and ignored a failed one (−1.0 points). A line in the false page claiming the check had passed added another 30.',
     image: '/paper/cheap-talk/main_fig1_premiums.png',

@@ -1,20 +1,32 @@
-import CheapTalk from '@/components/paper/CheapTalk'
 import type { Metadata } from 'next'
 
+const apart =
+  'https://apartresearch.com/sprints/projects/cheap-talk-answer-engines-ignore-failed-signature-checks-and-trust-forgeable-signals-v8442ohnb5'
+
 export const metadata: Metadata = {
-  title:
-    'Cheap Talk: Answer Engines Ignore Failed Signature Checks and Trust Forgeable Signals · Vignesh Kanike',
+  title: 'Cheap Talk · Vignesh Kanike',
   description:
-    'A sprint study of which trust signals answer engines follow: free forgeries, copied sources, and real signature checks.',
-  authors: [{ name: 'Vignesh Kanike' }],
+    'Cheap Talk is published on Apart Research. This page redirects there.',
+  alternates: { canonical: apart },
 }
 
-export default function CheapTalkPage() {
+export default function CheapTalkRedirectPage() {
   return (
-    <div className="column pb-8 pt-10 sm:pt-14">
-      <main id="main">
-        <CheapTalk />
-      </main>
-    </div>
+    <>
+      <meta httpEquiv="refresh" content={`0;url=${apart}`} />
+      <div className="column pb-16 pt-10">
+        <main id="main">
+          <p>
+            This report is published on Apart Research.{' '}
+            <a href={apart}>Continue to the project</a>.
+          </p>
+        </main>
+      </div>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `location.replace(${JSON.stringify(apart)})`,
+        }}
+      />
+    </>
   )
 }

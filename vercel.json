@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/writing/cheap-talk",
+      "destination": "https://apartresearch.com/sprints/projects/cheap-talk-answer-engines-ignore-failed-signature-checks-and-trust-forgeable-signals-v8442ohnb5",
+      "permanent": true
+    },
+    {
+      "source": "/writing/cheap-talk/",
+      "destination": "https://apartresearch.com/sprints/projects/cheap-talk-answer-engines-ignore-failed-signature-checks-and-trust-forgeable-signals-v8442ohnb5",
+      "permanent": true
+    }
+  ]
+}
